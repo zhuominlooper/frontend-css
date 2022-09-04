@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>垂直居中</title>
+  <style>
+    div{
+       background-color: cadetblue;
+       height: 60px;
+       text-indent: 2em;
+    }
+    .div1{
+      display: inline-block;
+    }
+    .div1,span{
+     vertical-align: middle;
+    }
+
+    .div2{
+      position: relative;
+    }
+    .div2>span{
+      color: aqua;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%)
+    }
+    .div3{
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div >
+    <div class="div1" style="height:60px"></div>
+     <span>采用vertical-align: middle实现</span>
+  </div>
+  <br>
+  <div class="div2">
+    <span>采用定位实现</span>  
+  </div>
+  <br>
+  <div class="div3">
+    <span>采用flex布局实现</span>
+  </div>
+</body>
+</html>

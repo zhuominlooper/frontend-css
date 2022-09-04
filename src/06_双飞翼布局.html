@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .left {
+      width: 100px;
+      background-color: aqua;
+    }
+
+    .content {
+      flex: 1;
+      background-color: beige;
+    }
+
+    .right {
+      width: 100px;
+      background-color: blueviolet;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 100px auto 100px;
+      background-color: #d0e4f5;
+    }
+
+    .grid-left {
+      background-color: blue;
+    }
+
+    .grid-right {
+      background-color: rgb(204, 22, 83);
+    }
+
+
+    .margin-container {
+    
+      width: 100%;
+      float: left;
+    }
+
+    .margin-content {
+        margin: 0 100px;
+      background-color: bisque;
+    }
+
+    .margin-left {
+      float: left;
+      background-color: blueviolet;
+      width: 100px;
+        margin-left: -100%;
+    }
+
+    .margin-right {
+      float: left;
+      background-color: cornflowerblue;
+      width: 100px;
+      margin-left: -100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 双飞翼布局：
+  两边固定不变，中间可伸缩 -->
+  <p>采用flex布局</p>
+  <div class="container">
+    <div class="left">left</div>
+    <div class="content">content</div>
+    <div class="right">right</div>
+  </div>
+  <hr>
+  <p>采用grid布局实现</p>
+  <div class="grid">
+    <div class="grid-left">grid-left</div>
+    <div class="grid-content">grid-content</div>
+    <div class="grid-right">grid-right</div>
+  </div>
+  <hr>
+  <p>采用margin实现</p>
+  <div class="margin-container">
+    <div class="margin-content">margin-content</div>
+  </div>
+
+  <div class="margin-left">margin-left</div>
+  <div class="margin-right">margin-right</div>
+</body>
+
+</html>

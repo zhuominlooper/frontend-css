@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bfc {
+      overflow: hidden;
+    }
+
+    .box1 {
+      width: 100px;
+      height: 100px;
+      padding: 16px;
+      border: 1px solid red;
+      margin-bottom: 20px;
+    }
+
+    .box2 {
+      margin-top: 20px;
+      width: 100px;
+      height: 100px;
+      padding: 16px;
+      border: 1px solid rgb(9, 212, 43);
+    }
+
+    .box3 {
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+    }
+
+    .box4 {
+      margin-top: 20px;
+      width: 50px;
+      height: 50px;
+      padding: 16px;
+      background-color: blue;
+    }
+
+    .box5 {
+      margin-top: 20px;
+      background-color: rgb(214, 214, 218);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+ 什么是BFC：
+ 块级格式化上下文，子元素的布局不会影响外部布局
+
+ 触发条件：
+ 1.float为left和right
+ 2.overflow不是visible，常用hide来设置
+ 3.display：不是block，inline，none就可以
+ 4.position：非relative和static
+
+ 解决什么问题
+ 1.margin重合
+ 2.margin塌陷
+ 3.高度塌陷 -->
+  <p>margin重合</p>
+  <div class="bfc">
+    <div class="box1">111</div>
+  </div>
+  <p>margin塌陷</p>
+  <div class="box2">222</div>
+  <hr>
+  <div class="box3 bfc">
+    <div class="box4">444</div>
+  </div>
+  <hr>
+  <p>清除浮动</p>
+  <div class="box5 bfc">
+    <img style="float: left;" src="https://img1.baidu.com/it/u=634567582,795108957&fm=253&fmt=auto?w=1167&h=500">
+    <div class=" bfc">
+      <div>这是一张图片</div>
+    </div>
+  </div>
+</body>
+</html>

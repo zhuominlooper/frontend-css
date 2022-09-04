@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>圣杯布局</title>
+  <style>
+    *{
+      text-align: center;
+    }
+header{
+
+  background-color: antiquewhite;
+}
+footer{
+  clear: both;
+  background-color: blueviolet;
+}
+.container{
+  padding: 0 200px;
+}
+.content{
+   float:left;
+   background-color: bisque;
+   width: 100%;
+}
+.left{
+  float:left;
+  width: 200px;
+  background-color: cornflowerblue;
+  margin-left: -100%;
+  position: relative;
+  left: -200px;
+}
+.right{
+float:left;
+width: 200px;
+background-color: brown;
+margin-right: -200px;
+}
+  </style>
+</head>
+<body>
+  <!-- 圣杯布局：
+    两侧宽度固定，中间content自适应，中间最先渲染出来
+  利用float加margin实现 -->
+  <header>这是一个header元素</header>
+  <div class="container">
+    <div class="content">content</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </div>
+  <footer>这是一个footer元素</footer>
+</body>
+</html>

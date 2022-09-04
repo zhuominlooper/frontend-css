@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>导航栏</title>
+  <style>
+    body{
+ 
+    }
+    .list{
+      list-style: none;
+      cursor: pointer;
+      background-color: cornflowerblue;
+       height: 28px;
+    }
+    .list li{
+      float: left;
+      font-size: 16px;
+     
+      line-height: 28px;
+      margin: 0px 4px;
+       font-weight: bold;
+    }
+    .item.frist{
+      color: #ff9000;
+      padding: 0 8px;
+    }
+    .item.frist:hover{
+      color: #fff;
+      background-color:#ff9000 ;
+      border-radius: 100px;
+      padding: 0 8px;
+    }
+
+    .item.sec{
+      color: #4d4d4d;
+      padding: 0 8px;
+    }
+     .item.sec.positon::before{
+        content: "|";
+        position: relative;
+        left: -13px;
+        color: rgba(0,0,0,0.25);
+    }
+     .item.sec:hover{
+      color: #fff;
+      background-color:#ff9000 ;
+      border-radius: 100px;
+      padding: 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <ul class="list">
+    <li class="item frist">天猫</li>
+    <li class=" item frist">聚划算</li>
+    <li class=" item frist">天猫超市</li>
+    <li class=" item sec positon">淘抢购</li>
+    <li class=" item sec">电器城</li>
+    <li class=" item sec">司法拍卖</li>
+    <li class=" item sec">中国制造</li>
+    <li class=" item sec">特色中国</li>
+  </ul>
+</body>
+</html>

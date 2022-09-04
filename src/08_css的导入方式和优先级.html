@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url(../common/index.css);
+    h1{
+      color: chartreuse;
+    }
+  </style>
+  <link rel="stylesheet" href="../common/index.css">
+</head>
+<body>
+  <!-- css引入方式的优先级：
+    1.行内样式最高
+    2.内部样式，link方式引入，import方式引入采用就近原则
+    3.import方式引入已经被link方式取代，import方式引入会导致闪频 
+    4.import是css2.1特有的，只能再style标签下使用
+  -->
+  <h1 style="color:red">测试优先级</h1>
+</body>
+</html>

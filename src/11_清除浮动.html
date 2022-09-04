@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content {
+      box-sizing: border-box;
+      padding: 16px;
+      margin: 20px;
+      width: 1000px;
+      border: 1px solid rgb(184, 181, 181);
+    }
+
+    .content>.img {
+      float: right;
+    }
+
+    .img1 {
+      float: right;
+    }
+
+    .img2 {
+      float: right;
+    }
+
+    .content::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .content1 {
+      box-sizing: border-box;
+      padding: 16px;
+      margin: 20px;
+      width: 1000px;
+      border: 1px solid rgb(184, 181, 181);
+    }
+
+    .div {
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <p>采用bfc实现清除浮动</p>
+  <div class="content" style="overflow: hidden;">
+    <img class='img' src="../common/test.png" />
+  </div>
+  <hr>
+  <p>采用伪元素实现</p>
+  <div class="content">
+    <img class='img1' src="../common/test.png" />
+  </div>
+  <hr>
+  <p>采用盒子实现</p>
+  <div class="content1">
+    <img class='img2' src="../common/test.png" />
+    <div class="div"></div>
+  </div>
+</body>
+
+</html>
